@@ -1,0 +1,37 @@
+﻿<Page x:Class="var2.ElementAPPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:var2"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ElementAPPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="0.5*"/>
+        </Grid.RowDefinitions>
+
+        <Label Foreground="White" Content="{Binding title}" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="2"/>
+
+       
+        <StackPanel Grid.Row="2" Grid.ColumnSpan="2">
+            <DataGrid AutoGenerateColumns="False" Name="elementTable">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Назввание" Width="*" Binding="{Binding title}"/>
+                    <DataGridTextColumn Header="Цена" Width="*" Binding="{Binding price}"/>
+                    <DataGridTextColumn Header="Описание" Width="*" Binding="{Binding description}"/>
+                </DataGrid.Columns>
+                
+            </DataGrid>
+        </StackPanel>
+    </Grid>
+</Page>

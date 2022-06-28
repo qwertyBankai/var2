@@ -1,0 +1,54 @@
+﻿<Page x:Class="var2.ClientPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:var2"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ClientPage">
+
+    <Grid Background="#50c878">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="0.5*"/>
+        </Grid.RowDefinitions>
+ 
+        <Label Foreground="White" Content="Пациенты" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="2"/>
+        
+        <StackPanel Grid.Column="0" Grid.Row="1">
+            <Label Content="Введите ФИО" Width="200"/>
+            <TextBox TextChanged="SearchByFio" Name="fioBox" Width="200"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" Grid.Row="1">
+            <Label Content="Введите ОМС" Width="200"/>
+            <TextBox TextChanged="SearchOms" Name="omsBox" Width="200"/>
+        </StackPanel>
+        <StackPanel Grid.Row="2" Grid.ColumnSpan="2">
+            <DataGrid AutoGenerateColumns="False" Name="clientTable" IsReadOnly="True" MouseDoubleClick="ClickToDataClient">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ОМС" Width="*" Binding="{Binding oms}"/>
+                    <DataGridTextColumn Header="ФИО" Width="*" Binding="{Binding fio}"/>
+                    <DataGridTextColumn Header="Паспорт" Width="*" Binding="{Binding seriesAndNumberPassword}"/>
+                    <DataGridTextColumn Header="Телефон" Width="*" Binding="{Binding phone}"/>
+                </DataGrid.Columns>
+                <DataGrid.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem Header="Редактировать" Click="EditClient"/>
+                        <MenuItem  Header="Удалить" Click="DeleteClient"/>
+                    </ContextMenu> 
+                </DataGrid.ContextMenu>
+            </DataGrid>
+        </StackPanel>
+        <StackPanel VerticalAlignment="Center" Grid.Row="3" Grid.ColumnSpan="2">
+            <Button Width="200" Click="GoClientPage" Content="Добавить" />
+        </StackPanel>
+    </Grid>
+</Page>
