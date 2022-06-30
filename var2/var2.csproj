@@ -254,6 +254,11 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <Resource Include="Resousre\1.jpg" />
+    <Resource Include="Resousre\2.jpg" />
+    <Resource Include="Resousre\3.jpg" />
+    <Resource Include="Resousre\4.jpg" />
+    <Resource Include="Resousre\5.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

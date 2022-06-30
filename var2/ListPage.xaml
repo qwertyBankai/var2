@@ -8,12 +8,12 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="ListPage">
 
-    <Grid Background="#50c878">
+    <Grid >
         <Grid.RowDefinitions>
             <RowDefinition />
             <RowDefinition Height="10*" />
         </Grid.RowDefinitions>
-        <ListView Name="paListViev" Grid.Row="1" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+        <ListView Name="paListViev" Background="#278b27" Grid.Row="1" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Grid Width="150" Height="150" MouseDown="ClickListAP">
@@ -23,11 +23,9 @@
                             <RowDefinition/>
                         </Grid.RowDefinitions>
                         <Image Grid.RowSpan="2" Stretch="Fill" Source="{Binding image}"/>
-                        <Grid Grid.Row="1" Background="#278b27" Opacity="0.9">
-                            <TextBlock Text="{Binding title}" HorizontalAlignment="Center" TextWrapping="Wrap" FontSize="16"/>
-                        </Grid>
-                        <Grid Grid.Row="2" Background="#278b27" Opacity="0.9">
-                            <TextBlock Text="{Binding price}" HorizontalAlignment="Center" TextWrapping="Wrap" FontSize="16"/>
+                        <Grid Grid.Row="2" Background="#0070c0" Opacity="0.7">
+                            <TextBlock Foreground="White" Text="{Binding title}" HorizontalAlignment="Center"  FontSize="16"/>
+                            <TextBlock Foreground="White" Text="{Binding price}" HorizontalAlignment="Center" VerticalAlignment="Bottom" TextWrapping="Wrap" FontSize="14"/>
                         </Grid>
                     </Grid>
                 </DataTemplate>

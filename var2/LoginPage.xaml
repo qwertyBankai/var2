@@ -8,7 +8,7 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="LoginPage">
 
-    <Grid Background="#50c878">
+    <Grid Background="#278b27">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition Width="2*"/>
@@ -23,18 +23,18 @@
             <Image Source="C:\Users\c1own\source\repos\var2\var2\Resousre\Logo.png" />
         </StackPanel>
         <StackPanel Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Label Content="Медицинская клиника 'Здоровье+' "/>
+            <Label FontSize="16" Foreground="White" Content="Медицинская клиника 'Здоровье+' "/>
         </StackPanel>
         <StackPanel Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Bottom">
             <Label Content="Авторизация" Foreground="white"  FontSize="26"/>
         </StackPanel>
-        <Border BorderBrush="Black" BorderThickness="3" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Row="1" Grid.Column="1" >
+        <Border BorderBrush="#0070c0" BorderThickness="2" Width="300" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Row="1" Grid.Column="1" >
             <StackPanel Margin="8">
-                <Label Content="Введите логин"/>
+                <Label Foreground="white" Content="Введите логин"/>
                 <TextBox Name="inputLogin"/>
-                <Label Content="Введите пароль"/>
+                <Label Foreground="white" Content="Введите пароль"/>
                 <TextBox Name="inputPassword"/>
-                <Button Content="Вход" Click="GoLoginPage" Margin="10"/>
+                <Button Foreground="white" FontSize="16" Content="Вход" Click="GoLoginPage" Margin="10"/>
 
             </StackPanel>
         </Border>

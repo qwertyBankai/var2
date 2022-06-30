@@ -29,7 +29,7 @@ namespace var2
 
 
             clientTable.ItemsSource = context.patients.ToList();
-           // Downloadpict();
+            Downloadpict();
 
         }
 
@@ -100,7 +100,7 @@ namespace var2
             var2Entities test = new var2Entities();
             foreach (var item in test.ListAnalysisAndProcedure.ToList())
             {
-                item.image = File.ReadAllBytes(@"C:\Users\c1own\source\repos\var2\var2\Resousre\Logo.png");
+                item.image = File.ReadAllBytes(@"C:\Users\c1own\Desktop\Новая папка\var2\var2\Resousre\" + item.id + ".jpg");
             }
             test.SaveChanges();
         }
